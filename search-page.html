@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高雄市腳踏車-站點查詢</title>
+	<link rel=stylesheet type="text/css" href="all.css">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html"><img id="logo" src="img/logo-1.png" ></a>
+		<div id="header-title">C-Bike</div>
+		<div class="header-list">
+			<ul>
+				<a href="pathPlanning.html"><li>路線規劃</li></a>
+				<a href="search-page.html"><li>站點查詢</li></a>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="body" id="search-page-body">
+		<div class="mobile-body">
+		<a href=""><div class="list-bottom-mobile">
+			▲ 站點查詢頁面
+		</div></a>
+		<a href=""><div class="list-bottom-mobile">
+			▲ 路徑導航頁面
+		</div></a>
+		<div class="mobile-introduction">
+			<img id="mobile-No1" src="img/mobile.No.1.png"> <span id="search-page-title">  搜尋站點</span><br>
+				<span id="introduction-words">▼ 點擊地圖圖示可知更多站點資訊</span>
+		</div>
+
+	</div>
+		<div class="search-map">
+			<div id="map">
+
+			</div>
+
+
+			<div class="search-page-introduce">
+				<img id="No1" src="img/No.1.png"> <span id="search-page-title">  搜尋站點</span><br>
+				◀ 點擊圖上圖示可知更多站點資訊
+
+			</div>
+
+
+		</div>
+		<div class="clear"></div>
+		
+	</div>
+<!--
+	<div class="map-popout">
+		<div class="map-popout-title">
+			<img id="No2" src="img/No.2.png"><span id="map-popout-title-word">  站點資訊</span>
+		</div>
+			<div class="map-popout-info">
+			<div class="map-popout-stop-name">
+				高雄大學站
+			</div>
+			<div class="map-popout-stop-left-car">
+				<img id="map-popout-icon" src="img/bicycle.png">
+				<p id="map-popout-number">5</p>
+				<div class="clear"></div>
+			</div>
+			<div class="map-popout-stop-left-space">
+				<img id="map-popout-icon" src="img/back-arrow.png">
+				<p id="map-popout-number">7</p>
+			<div class="clear"></div>			
+			</div>
+			<div class="clear"></div>
+			<div class="map-popout-address">
+				高雄市楠梓區高雄大學路700號
+			</div>
+			<div class="map-popout-streetview">
+				<img id="map-popout-pic" src="img/photo1.jpg">
+				<img id="map-popout-pic" src="img/photo2.jpg">
+			</div>
+			</div>
+	</div>
+-->
+	<div id="picture-preview" onclick="hiddenbigpic()">
+		<img id="big-pic" src="img/attention.png">
+	</div>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/all-kz-version.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuozcz3U3304ENVzXvdLf0VsKKDrtwmIk&v=3&callback=initMap">
+    </script>
+
+</body>
+</html>

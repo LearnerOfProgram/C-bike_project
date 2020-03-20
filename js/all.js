@@ -1,9 +1,9 @@
   //引入css
-  $('head').append('<link rel="stylesheet" href="all.css" type="text/css" />');
+  //$('head').append('<link rel="stylesheet" href="all.css" type="text/css" />');
 
   var map;
   var initialLocation;
-  var K_city_government = new google.maps.LatLng(22.620424, 120.312047); //高雄市四維行政中心
+  //var K_city_government = new google.maps.LatLng(22.620424, 120.312047); //高雄市四維行政中心
   var browserSupportFlag =  new Boolean();
   var currentPost;  //現在位置
   var situation = 'default';  //標記重點用
@@ -531,7 +531,7 @@
     else {
         $.alert("您的瀏覽器似乎不支援定位服務 :( ");
     }
-    initialLocation = K_city_government;
+    initialLocation = new google.maps.LatLng(22.620424, 120.312047); //高雄市四維行政中心;
     map.setCenter(initialLocation);
   }
 

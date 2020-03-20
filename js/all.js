@@ -1,5 +1,5 @@
   //引入css
-  //$('head').append('<link rel="stylesheet" href="all.css" type="text/css" />');
+  $('head').append('<link rel="stylesheet" href="all.css" type="text/css" />');
 
   var map;
   var initialLocation;

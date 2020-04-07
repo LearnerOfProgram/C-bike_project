@@ -27,7 +27,7 @@
 
   var global_circle, global_target;   //global_target儲存[使用者輸入地址](型別marker)
   var dynamic_taInfowindow;
-  var gobj_directionsDisplay; //最後畫路靜的控制器(全域變數才能偵測二次畫圖問題)
+  var gobj_directionsDisplay; //最後畫路徑的控制器(全域變數才能偵測二次畫圖問題)
 
   var dangerRoadIntersection = [];  //十大危險路口(包含5個properties)
   var allWarmMarker=[];
@@ -471,7 +471,7 @@
       var theStartBikeID = stopID[1].replace("#","");       //stopID[1] = "123" 再去除#
 
       var locations=[];
-      // var markers=[]; //區域變數
+
       var defaultIcon = makeMarkerIcon('default');
       var highlightedIcon = makeMarkerIcon('highlight');
 
@@ -540,14 +540,6 @@
             newCurrentPost.setMap(map);
             map.setCenter(initialLocation);
 
-            var nowInfowindow = new google.maps.InfoWindow();
-            var showText ="<div class='nowInfowindow'>請點擊上方［取得腳踏車］</div>";
-            nowInfowindow.setContent(showText);
-            nowInfowindow.addListener('closeclick', function() {
-              nowInfowindow.close(map, newCurrentPost);
-            });
-            nowInfowindow.open(map, newCurrentPost);
-
             //更新畫面上[起點]的顯示文字
             document.getElementById("showStartPoint-text").textContent = dynamic_StartPoint.title;
             //輸入目的地相關設定
@@ -557,8 +549,6 @@
             //按下送出地址
             $('#submitButton').click(function() {
                 if( document.getElementById('yourterminalPoint-keiIn').value != "" ){
-                    //關閉提示窗
-                    nowInfowindow.close(map, currentPost);
                     //只要有按送出就算一次搜尋
                     repeatKeyin++;  
                     ifRoadChanged = true ;
@@ -903,7 +893,7 @@
       })
       var addWarmPic="<img src=\"img/attention2.png\">";
 
-      //仙卿清除掉地圖上的危險路段警示
+      //先清清除掉地圖上的危險路段警示
       for(let w=0; w<allWarmMarker.length; w++){
           allWarmMarker[w].setMap(null);
       }

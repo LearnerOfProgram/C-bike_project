@@ -924,18 +924,18 @@
 
           var tempTime = response.routes[0].legs[0].steps[a].duration.value;
           if(tempTime>=60){   //超過1分鐘
-              Bpart[a].textContent = (response.routes[0].legs[0].steps[a].duration.value/60).toFixed(0)+" 分";
+              Bpart[a].innerHTML = (response.routes[0].legs[0].steps[a].duration.value/60).toFixed(0)+"分";
           }
           else{
-              Bpart[a].textContent = (response.routes[0].legs[0].steps[a].duration.value)+" 秒";
+              Bpart[a].innerHTML = (response.routes[0].legs[0].steps[a].duration.value)+"秒";
           }
 
           var tempDis = response.routes[0].legs[0].steps[a].distance.value;
           if(tempDis>=500){ //500公尺以上
-              Cpart[a].textContent = (tempDis/1000).toFixed(0) + " 公里"; //四捨五入 小數後一位
+              Cpart[a].textContent = (tempDis/1000).toFixed(0) + " km"; //四捨五入 小數後一位
           }
           else{
-              Cpart[a].textContent = tempDis.toFixed(0) + " 公尺";
+              Cpart[a].textContent = tempDis.toFixed(0) + " m";
           }
 
 

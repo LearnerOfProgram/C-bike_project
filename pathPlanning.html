@@ -25,21 +25,21 @@
 				<div id="lookForBike">
 					<a href="#" id="clickForBike">
 						<img src="img/bike-white.png" id="lookForBike-pic" alt="">
-						<span id="lookForBike-text">取得腳踏車</span>
+						<span id="lookForBike-text">取得最近腳踏車</span>
 						<div class="clear"></div>
 					</a>
 				</div>
 				<img src="img/flag01.png" id="flag01" alt="">
 				<div id="showStartPoint">
 					<img src="img/startPoint.png" id="showStartPoint-pic" alt="">
-					<span id="showStartPoint-text"> (尚未選擇) </span>
+					<span id="showStartPoint-text">尚未選擇</span>
 					<div class="clear"></div>
 				</div>
 				<img src="img/flag02.png" id="flag02" alt="">
 				<div id="yourterminalPoint">
 					<div class="outlinContainBox">
 						<img src="img/terminalPoint.png" id="yourterminalPoint-pic" alt="">
-						<input type="text" placeholder="請輸入您要前往的目的地" id="yourterminalPoint-keiIn">
+						<input type="text" placeholder="請輸入要前往的地址" id="yourterminalPoint-keiIn">
 						<a href="#" id="submitButton">GO</a>
 						<div class="clear"></div>
 					</div>
@@ -81,13 +81,16 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuozcz3U3304ENVzXvdLf0VsKKDrtwmIk&v=3&callback=initMapPathPlanPage">
-    </script>
-	<script type="text/javascript" src="js/all.js" ></script>
+
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
 	<script type="text/javascript" src="js/jQuery-MsgBox.js"></script>
-	
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyDuozcz3U3304ENVzXvdLf0VsKKDrtwmIk&v=3&language=zh-tw&callback=initMapPathPlanPage">
+    </script>
+<!-- 	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDuozcz3U3304ENVzXvdLf0VsKKDrtwmIk&v=3&language=zh-tw"> -->
+    </script>
+    <script type="text/javascript" src="js/all.js" ></script>
+
 	<script>
 		//初進入時"expectValueArea"那塊是不顯示的
   		$(".expectValueArea").last().addClass('isHidden');
@@ -110,5 +113,6 @@
 		});
 
 	</script>
+
 </body>
 </html>

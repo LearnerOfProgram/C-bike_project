@@ -48,596 +48,911 @@ table {
 }
 
 /*以上是reset*/
-html{
-	height: 100%;
-}
+/*********************************************************************************/
 
-body{
-	height: 100%;
-	font-family: "微軟正黑體";
-}
+/*default: 1360*168	*/
+/*desktop*/
 
-.header{
-	width: 100%;
-	min-height: 10%;
-	background-color: white;
-}
-
-.content{
-	width: 100%;
-	min-height: 90%;
-	/*background-color: orange;*/
-}
-
-.left-fun-outline{
-	width: 80%;
-	height: 90vmin;
-	/*background-color: orange;*/
-	float: left;
-	display: block;
-}
-
-.processArea{
-	width: 100%;
-	height: 12vmin;
-	position: relative;
-	/*background-color: blue;*/
-}
-
-#lookForBike{
-	width: 65%;
-	height: 12vmin;
-	background-color: #34799C;
-	float: left;
-	/**/
-	transition: width 2s;
-}
-
-#clickForBike{
-	display: block;
-	padding: 0.5em 10em;
-	margin: 0 auto 0 8em;
-}
-
-#lookForBike-pic{
-	width: 50px;
-	height: 50px;
-	float: left;
-}
-#lookForBike-text{
-	float: left;
-	font-size: 1em;
-	padding: 1em 0 0 0.5em;
-	color: #FFF;
-}
-
-#flag01{
-	position: absolute;
-	z-index: 999;
-	height: 5vmin;
-	top: 30%;
-	left: 63.5%;
-}
-
-#flag02{
-	position: absolute;
-	z-index: 999;
-	height: 5vmin;
-	top: 30%;
-	left: 88.7%;
-}
-
-#showStartPoint{
-	width: 25%;
-	height: 12vmin;
-	background-color: #2F4199;
-	float: left;
-	transition: width 2s;
-}
-
-#showStartPoint-pic{
-	width: 60px;
-	height: 55px;
-	margin: 0.8em 0 0 2em;
-	float: left;
-}
-
-#showStartPoint-text{
-	float: left;
-	font-size: 1em;
-	padding: 1.8em 0 0 0.2em;
-	color: #FFF;
-}
-
-/*動畫*/
-@keyframes extendWidth_start {
-    from {
-    	width: 65%;
-    	font-size: 1em;
-    }
-    to {
-    	width: 70%;
-    	font-size: 1.2em;
-    	font-weight: bold;
-    }
-}
-
-@keyframes extendWidth_end {
-    from {
-    	width: 70%;
-    	font-size: 1.2em;
-    	font-weight: bold;
-    }
-    to {
-    	width: 65%;
-		font-size: 1em;
-		font-weight: normal;
-    }
-}
-
-@keyframes reduceWidth_start {
-    from {width: 25%;}
-    to {width: 20%;}
-}
-
-@keyframes reduceWidth_end {
-    from {width: 20%;}
-    to {width: 25%;}
-}
-
-@keyframes arowMove_start{
-	from{
-		left: 63.5%;
+@media(min-width: 1200px) {
+	html{
+		height: 100%;
 	}
-	to{
-		left: 68.5%;
+
+	body{
+		height: 100%;
+		font-family: "微軟正黑體";
 	}
-}
 
-@keyframes arowMove_end{
-	from{
-		left: 68.5%;
-	}
-	to{
-		left: 63.5%;
-	}
-}
-
-/*part2*/
-
-@keyframes bikePic_ani{
-	from{ width: 50px;height: 50px }
-	to{ width: 100px;height: 100px }
-}
-
-@keyframes bikeButtonreduce_start{
-	from{ width: 65%; }
-	to{ width: 15%; }
-}
-
-
-@keyframes startPoint_start{
-	from{ width: 25%; }
-	to{ width: 19%; }
-}
-
-@keyframes ternimalPoint_start{
-	from{ width: 10%; }
-	to{ width: 66%; }
-}
-
-
-@keyframes flag01_part2{
-	from{left: 68.5%;}
-	to{left: 13.6%;}
-}
-
-
-@keyframes flag02_part2{
-	from{left: 88.7%;}
-	to{left: 32.6%;}
-}
-
-#yourterminalPoint{
-	width: 10%;
-	height: 12vmin;
-	background-color: #212E6D;
-	float: left;
-}
-
-.outlinContainBox{
-	margin: 0.7em 1.8em;
-	height: 60%;
-	/*border-bottom: 1px solid #9DC3E6;*/
-}
-
-#yourterminalPoint-pic{
-	width: 60px;
-	/*height: 55px;*/
-	float: left;
-	margin-bottom: 0.5em;
-}
-
-#yourterminalPoint-keiIn{
-	float: left;
-	padding: 0.8em 0.5em 0.5em 0.5em;
-	min-width: 75vmin;
-	font-size: 1.1em;
-	background-color: rgba(0,0,0,0);
-	border: 0px solid rgba(0,0,0,0);
-	color: #FFF;
-	font-family: "微軟正黑體";
-	outline: none;
-}
-
-::-webkit-input-placeholder { 
-	/* WebKit, Blink, Edge */
-    color: #E6E6E6;
-}
-
-#submitButton{
-	background-color: #9DC3E6;
-	border-radius: 3px;
-	color: #212E6D;
-	font-size: 1.4em;
-	padding: 10px 18px;
-	margin-top: 0.2em;
-	float: left;
-	margin-left: 0.2em;
-	text-decoration: none;
-}
-
-#mapArea{
-	width: 100%;
-	height: 78vmin;	/*90-14再微調*/
-}
-
-.right-fun-outline{
-	width: 19.5%;
-	height: 89vmin;
-	/*background-color: pink;*/
-	float: left;
-	display: block;
-	border: 3px solid #41719C;
-}
-
-.detailDirectionArea{
-	width: 100%;
-	height: 70%;
-}
-
-#detailDirectionArea-title{
-	width: 100%;
-	/*height: 8%;*/
-	background-color: #4293D6;
-	text-align: center;
-	color: #FFF;
-	padding: 3% 0;
-	font-weight: bold;
-	border-bottom: 3px solid #41719C;
-}
-
-#detailDirectionArea-text{
-	width: 100%;
-	height: 92%;
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
-#detailDirectionArea-text-clue{
-	color: #B8BEBE;
-	margin: auto;
-	text-align: center;
-	position: absolute;
-	z-index: 99;
-	top: 65%;
-	left: 25%;
-}
-
-.oneAsignmentBox{
-	width: 100%;
-	min-height: 15%;
-	border-bottom: 2px dashed #BBCFEB;
-}
-
-
-.oneAsignmentBox-text{
-	float: left;
-	width: 48%;
-	max-width: 48%;
-	min-height: 40%;
-	display: block;
-	clear: both;
-	font-size: 1em;
-	text-align: left;
-	margin: 0.8em 0 0.5em 0.5em;
-}
-
-.oneAsignmentBox-TDarea{
-	float: left;
-	width: 23%;
-	max-width: 23%;
-	height: 100%;
-}
-
-.oneAsignmentBox-TDarea-time{
-	height: 60%;
-	text-align: right;
-	font-size: 1.1em;
-	line-height: 2.2em;
-}
-.oneAsignmentBox-TDarea-distance{
-	height: 40%;
-	text-align: right;
-	font-size: 0.3em;
-	line-height: 2.2em;
-}
-
-.oneAsignmentBox-ifWarn{
-	float: left;
-	width: 25%;
-	max-width: 25%;
-	height: 100%;
-}
-
-.oneAsignmentBox-ifWarn-pic{
-	width: 100%;
-	height: 60%;
-	/*background-color: blue;*/
-}
-
-.oneAsignmentBox-ifWarn-pic img{
-	width: 25px;
-	height: 25px;
-	margin: 15% 25%;
-}
-
-.oneAsignmentBox-ifWarn-text{
-	width: 100%;
-	height: 40%;
-	color: #D80027;
-	font-size: 0.1em;
-	text-align: center;
-	margin-top: 0.2em;
-	/*background-color: yellow;*/
-}
-
-.expectValueArea{
-	width: 100%;
-	height: 30%;
-	display: block;
-	/*background-color: pink;*/
-}
-
-#expectValueArea-title{
-	width: 100%;
-	background-color: #4293D6;
-	text-align: center;
-	color: #FFF;
-	padding: 3% 0;
-	font-weight: bold;
-	border-bottom: 3px solid #41719C;
-	border-top: 3px solid #41719C;
-}
-
-#expectValueArea-text-time{
-	float: left;
-	width: 50%;
-	height: 21vmin;
-	background-color: #9DC3E6;
-}
-
-#expectValueArea-text-time-title,#expectValueArea-text-cost-gernal{
-	font-size: 1.05em;
-	color: #000;
-	text-align: center;
-	height: 50%;
-	line-height: 430%;
-}
-
-#expectValueArea-text-time-content{
-	max-height: 50%;
-	overflow: hidden;
-	font-size: 1em;
-	color: #000;
-	text-align: center;
-	line-height: 265%;
-}
-
-.focusSingleWord{
-	font-weight: bold;
-	font-size: 1.35em;
-}
-.secondaryWord{
-	font-size: 0.8em;
-}
-
-#expectValueArea-text-cost{
-	float: left;
-	width: 49.1%;
-	height: 21vmin;
-	background-color: #9DC3E6;
-	border-left: 2px solid #242121;
-}
-
-#expectValueArea-text-time-special{
-	font-size: 1.05em;
-	color: #000;
-	text-align: center;
-	height: 50%;
-	line-height: 230%;
-}
-
-.clear{
-	clear: both;
-}
-
-/*message box CSS*/
-div.msgbox-ui{
-	background-color: #F66359;
-	border: 0px solid rgba(0,0,0,0);
-	width: 320px;
-	margin: 25% auto;
-}
-
-div.msgbox-msg{
-	color: #FFF;
-	font-family: "微軟正黑體";
-	font-size: 1.5em;
-	display: inline-block;
-	padding: 0;
-	margin: 1em 3em;
-}
-
-div.msgbox-buttons{
-	padding: 0;
-}
-
-button.msgbox-ok{
-	width: 100%;
-	padding: 0.5em;
-	margin: 0;
-	border: 0px solid rgba(0,0,0,0);
-	content: '關閉';
-	font-family: "微軟正黑體";
-	/*background-color: #FFAA2C;
-	color: #FFF;
-	font-size: 1.6em;*/
-}
-
-.isHidden{
-	display: none;
-}
-
-.gm-style-iw{
-    width: 800px;
-    height: 85px;
-}
-
-
-
-img{
-	max-width: 100%;
-	height: auto;
-}
-
-html{
-	height: 100%;
-}
-
-body{
-	height: 100%;
-}
-
-
-.header{
-	width: 100%;
-	height: 10%;
-	background-color: white; 
-}
-
-
-#logo{
-	height: 55px;
-	display: inline-block;
-	margin: 0.3% 1% 0 6%;
-	float: left;
-}
-
-#header-title{
-	font-family: Microsoft JhengHei;
-	font-size: 20px;
-    display: inline-block; 
-    width: 10%;
-    height: 35%;
-	color: black;
-	float: left;
-	padding-top: 2%; 
-}
-
-.body{
-	height: 88%;
-	margin:0px;
-	padding:0px;
-	background:#fff url("img/S0FPXzA0MTYuSlBH.JPG") center center fixed no-repeat;　//設定背景圖片的呈現方式
-	background-size: cover;　//設定背景圖片的填滿方式	
-}
-
-.title{
-	background-color: rgba(0, 32, 96, 0.3);
-	height: 100%;
-	width: 40%;
-}
-
-.title_word{
-	width: 80%;
-	height: 20%;
-	margin:auto;
-	padding-top: 45%;
-}
-
-#title-small{
-	color: white;
-	font-family: Microsoft JhengHei;
-	font-weight: bold;
-	font-size:45px;
-}
-#title-big{
-	color: white;
-	font-family: Microsoft JhengHei;
-	font-weight: bold;
-	font-size:50px;
-}
-
-.header-list{
-	float: right;
-	width: 50%;
-	margin-right: 3%;
-}
-
-.header-list ul li{
-	display: inline;
-/*	background: orange;  */
-	float: right;
-	margin-top: 2.8%;
-	margin-right: 2%;
-	font-size: 15px;
-	font-weight: bold;
-	color: black;
-	font-family: Microsoft JhengHei;
-	padding: 10px;
-}
-
-.header-list ul li:hover{
-	/*background: #A0B4DC;*/
-	background-image: url('img/bicycle-transBlue.png');
-}
-
-.smartphone-botton{
-	display: none;
-}
-
-.bottom-view-word{
-	display: none;
-}
-
-@media(max-width:320px) {
 	.header{
-	background-color: rgb(202, 228, 186);
-	height: 8%;
+		width: 100%;
+		min-height: 10%;
+		background-color: white;
+	}
+
+	.content{
+		width: 100%;
+		min-height: 90%;
+	}
+
+	.left-fun-outline{
+		width: 80%;
+		height: 90vmin;
+		float: left;
+		display: block;
+	}
+
+	.processArea{
+		width: 100%;
+		height: 12vmin;
+		position: relative;
+	}
+
+	#lookForBike{
+		width: 65%;
+		height: 12vmin;
+		background-color: #34799C;
+		float: left;
+		transition: width 2s;
+	}
+
+	#newAddBike{
+		width: 40%;
+		height: 80%;
+		padding: 0.5em 3em;
+	}
+
+	#clickForBike{
+		display: block;
+		padding: 0.5em 10em;
+		margin: 0 auto 0 8em;
+	}
+
+	#lookForBike-pic{
+		width: 50px;
+		height: 50px;
+		float: left;
+	}
+	#lookForBike-text{
+		float: left;
+		font-size: 1em;
+		padding: 1em 0 0 0.5em;
+		color: #FFF;
+	}
+
+	#flag01{
+		position: absolute;
+		z-index: 999;
+		height: 5vmin;
+		top: 30%;
+		left: 63.5%;
+	}
+
+	#flag02{
+		position: absolute;
+		z-index: 999;
+		height: 5vmin;
+		top: 30%;
+		left: 88.7%;
+	}
+
+	#showStartPoint{
+		width: 25%;
+		height: 12vmin;
+		background-color: #2F4199;
+		float: left;
+		transition: width 2s;
+	}
+
+	#showStartPoint-pic{
+		width: 60px;
+		height: 55px;
+		margin: 0.8em 0 0 2em;
+		float: left;
+	}
+
+	#showStartPoint-text{
+		float: left;
+		font-size: 1em;
+		padding: 1.8em 0 0 0.2em;
+		color: #FFF;
+		font-weight: bold;
+	}
+
+	/*動畫*/
+	@keyframes extendWidth_start {
+	    from {
+	    	width: 65%;
+	    	font-size: 1em;
+	    }
+	    to {
+	    	width: 70%;
+	    	font-size: 1.2em;
+	    	font-weight: bold;
+	    }
+	}
+
+	@keyframes extendWidth_end {
+	    from {
+	    	width: 70%;
+	    	font-size: 1.2em;
+	    	font-weight: bold;
+	    }
+	    to {
+	    	width: 65%;
+			font-size: 1em;
+			font-weight: normal;
+	    }
+	}
+
+	@keyframes reduceWidth_start {
+	    from {width: 25%;}
+	    to {width: 20%;}
+	}
+
+	@keyframes reduceWidth_end {
+	    from {width: 20%;}
+	    to {width: 25%;}
+	}
+
+	@keyframes arowMove_start{
+		from{
+			left: 63.5%;
+		}
+		to{
+			left: 68.5%;
+		}
+	}
+
+	@keyframes arowMove_end{
+		from{
+			left: 68.5%;
+		}
+		to{
+			left: 63.5%;
+		}
+	}
+
+	/*part2*/
+
+	@keyframes bikePic_ani{
+		from{ width: 50px;height: 50px }
+		to{ width: 100px;height: 100px }
+	}
+
+	@keyframes bikeButtonreduce_start{
+		from{ width: 65%; }
+		to{ width: 15%; }
+	}
+
+
+	@keyframes startPoint_start{
+		from{ width: 25%; }
+		to{ width: 19%; }
+	}
+
+	@keyframes ternimalPoint_start{
+		from{ width: 10%; }
+		to{ width: 66%; }
+	}
+
+
+	@keyframes flag01_part2{
+		from{left: 68.5%;}
+		to{left: 13.6%;}
+	}
+
+
+	@keyframes flag02_part2{
+		from{left: 88.7%;}
+		to{left: 32.6%;}
+	}
+
+	#yourterminalPoint{
+		width: 10%;
+		height: 12vmin;
+		background-color: #212E6D;
+		float: left;
+	}
+
+	.outlinContainBox{
+		margin: 0.7em 1.8em;
+		height: 60%;
+	}
+
+	#yourterminalPoint-pic{
+		width: 60px;
+		float: left;
+		margin-bottom: 0.5em;
+	}
+
+	#yourterminalPoint-keiIn{
+		float: left;
+		padding: 0.6em;
+		min-width: 75vmin;
+		font-size: 1.1em;
+		background-color: rgba(0,0,0,0);
+		border-bottom: 1px solid rgb(157, 195, 230);
+		border-top: rgba(0, 0, 0, 0);
+		border-right: rgba(0, 0, 0, 0);
+		border-left: rgba(0, 0, 0, 0);
+		color: #FFF;
+		font-family: "微軟正黑體";
+		outline: none;
+	}
+
+	::-webkit-input-placeholder { 
+		/* WebKit, Blink, Edge */
+		color: #FFF;
+	}
+
+
+	#submitButton{
+		background-color: #9DC3E6;
+		border-radius: 3px;
+		color: #212E6D;
+		font-size: 1.4em;
+		padding: 10px 18px;
+		margin: 0.2em 0.75em;
+		float: left;
+		text-decoration: none;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	#mapArea{
+		width: 100%;
+		height: 78vmin;	/*90-14再微調*/
+	}
+
+	.right-fun-outline{
+		width: 19.5%;
+		height: 89vmin;
+		float: left;
+		display: block;
+		border: 3px solid #41719C;
+	}
+
+	.detailDirectionArea{
+		width: 100%;
+		height: 70%;
+	}
+
+	#detailDirectionArea-title{
+		width: 100%;
+		background-color: #4293D6;
+		text-align: center;
+		color: #FFF;
+		padding: 3% 0;
+		font-weight: bold;
+		border-bottom: 3px solid #41719C;
+	}
+
+	#detailDirectionArea-text{
+		width: 100%;
+		height: 92%;
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: auto;
+		text-align: center;
+	}
+
+	#detailDirectionArea-text #needTyping{
+		width: 50%;
+		height: 45%;
+		margin-top: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#detailDirectionArea-text-clue{
+		color: #B8BEBE;
+		margin: auto;
+		text-align: center;
+		position: absolute;
+		z-index: 99;
+		top: 65%;
+		left: 25%;
+	}
+
+	.oneAsignmentBox{
+		width: 100%;
+		border-bottom: 2px dashed #BBCFEB;
+	}
+
+
+	.oneAsignmentBox-text{
+		float: left;
+		width: 48%;
+		padding: calc(9%) 0 1em 1em;
+		display: block;
+		clear: both;
+		font-size: 1em;
+		text-align: left;
+	}
+
+	.oneAsignmentBox-TDarea{
+		float: left;
+		width: 20%;
+		max-width: 23%;
+		padding: calc(5%) 0;
+
+	}
+
+	.oneAsignmentBox-TDarea-time{
+		height: 60%;
+		text-align: right;
+		font-size: 1.1em;
+		line-height: 2em;
+	}
+	.oneAsignmentBox-TDarea-distance{
+		height: 40%;
+		text-align: right;
+		font-size: 0.3em;
+		line-height: 2.2em;
+	}
+
+	.oneAsignmentBox-ifWarn{
+		float: left;
+		width: 25%;
+		max-width: 25%;
+		padding: calc(3%) 0;
+	}
+
+	.oneAsignmentBox-ifWarn-pic{
+		width: 100%;
+		height: 60%;
+	}
+
+	.oneAsignmentBox-ifWarn-pic img{
+		width: 25px;
+		height: 25px;
+		margin: 12% 25%;
+	}
+
+	.oneAsignmentBox-ifWarn-text{
+		width: 100%;
+		height: 40%;
+		color: #D80027;
+		font-size: 0.1em;
+		text-align: center;
+		margin-top: 0.2em;
+	}
+
+	.expectValueArea{
+		width: 100%;
+		height: 30%;
+		display: block;
+	}
+
+	#expectValueArea-title{
+		width: 100%;
+		background-color: #4293D6;
+		text-align: center;
+		color: #FFF;
+		padding: 3% 0;
+		font-weight: bold;
+		border-bottom: 3px solid #41719C;
+		border-top: 3px solid #41719C;
+	}
+
+	#expectValueArea-text-time{
+		float: left;
+		width: 50%;
+		height: 21vmin;
+		background-color: #9DC3E6;
+	}
+
+	#expectValueArea-text-time-title,#expectValueArea-text-cost-gernal{
+		font-size: 1.05em;
+		color: #000;
+		text-align: center;
+		height: 50%;
+		line-height: 430%;
+	}
+
+	#expectValueArea-text-time-content{
+		max-height: 50%;
+		overflow: hidden;
+		font-size: 1em;
+		color: #000;
+		text-align: center;
+		line-height: 265%;
+	}
+
+	.focusSingleWord{
+		font-weight: bold;
+		font-size: 1.35em;
+	}
+	.secondaryWord{
+		font-size: 0.8em;
+	}
+
+	#expectValueArea-text-cost{
+		float: left;
+		width: 49.1%;
+		height: 21vmin;
+		background-color: #9DC3E6;
+		border-left: 2px solid #242121;
+	}
+
+	#expectValueArea-text-time-special{
+		font-size: 1.05em;
+		color: #000;
+		text-align: center;
+		height: 50%;
+		line-height: 230%;
+	}
+
+	.clear{
+		clear: both;
+	}
+
+	/*message box CSS*/
+	div.msgbox-ui{
+		background-color: #F66359;
+		border: 0px solid rgba(0,0,0,0);
+		width: 335px;
+		margin: 25% auto;
+		text-align:justify
+	}
+
+	div.msgbox-msg{
+		color: #FFF;
+		font-family: "微軟正黑體";
+		font-size: 1.5em;
+		display: inline-block;
+		padding: 0;
+		margin: 1em 3em;
+	}
+
+	div.msgbox-buttons{
+		padding: 0;
+	}
+
+	button.msgbox-ok{
+		width: 50%;
+		padding: 0.5em;
+		margin: 0;
+		border: 1px solid gray;
+		font-family: "微軟正黑體";
+		float: left;
+		cursor: -webkit-pointer; 
+		cursor: pointer;
+	}
+
+	button.msg-start_navi{
+		width: 50%;
+		padding: 0.5em;
+		margin: 0;
+		border: 1px solid gray;
+		font-family: "微軟正黑體";
+		float: right;
+		cursor: -webkit-pointer; 
+		cursor: pointer;
+	}
+
+
+	button.msg-demo{
+		width: 50%;
+		padding: 0.5em;
+		margin: 0;
+		border: 1px solid gray;
+		font-family: "微軟正黑體";
+		float: right;
+		cursor: -webkit-pointer; 
+		cursor: pointer;
+	}
+
+	.nowInfowindow{
+		background-color: #c7ed7d;
+		color: black;
+		font-size: 1.3em;
+		text-align: center;
+		padding: 25px;
+		font-family: "微軟正黑體";
+		font-weight: bold;
+	}
+
+	.isHidden{
+		display: none;
+	}
+
+	.isShow{
+		display: block;
+	}
+
+	/*站點查詢頁的pop*/
+	.gm-style-iw #pop-type1{
+	    width: 375px;
+	    height: 250px;
+	    background: rgb(255,255,136);
+	}
+
+	/*路徑規劃頁的pop*/
+	.gm-style-iw #pop-type2{
+	    width: 150px;
+	    height: 90px;
+	}
+
+
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	html{
+		height: 100%;
+	}
+
+	body{
+		height: 100%;
+		font-family: "微軟正黑體";
+	}
+
+
+	.header{
+		width: 100%;
+		height: 10%;
+		background-color: white; 
+	}
+
+
+	#logo{
+		height: 55px;
+		display: inline-block;
+		margin: 0.3% 1% 0 6%;
+		float: left;
 	}
 
 	#header-title{
-		font-size: 18px;
+		font-family: Microsoft JhengHei;
+		font-size: 20px;
+	    display: inline-block; 
+	    width: 10%;
+	    height: 35%;
+		color: black;
+		float: left;
+		padding-top: 1.5%; 
+	}
+
+	.body{
+		height: 88%;
+		margin:0px;
+		padding:0px;
+		background:#fff url("img/S0FPXzA0MTYuSlBH.JPG") center center fixed no-repeat;　/*設定背景圖片的呈現方式*/
+		background-size: cover;　/*設定背景圖片的填滿方式	*/
+	}
+
+	.title{
+		background-color: rgba(0, 32, 96, 0.3);
+		height: 100%;
+		width: 40%;
+	}
+
+	.title_word{
+		width: 80%;
+		height: 20%;
+		margin:auto;
+		padding-top: 45%;
+	}
+
+	#title-small{
+		color: white;
+		font-family: Microsoft JhengHei;
+		font-weight: bold;
+		font-size:45px;
+	}
+	#title-big{
+		color: white;
+		font-family: Microsoft JhengHei;
+		font-weight: bold;
+		font-size:50px;
+	}
+
+	.header-list{
+		float: right;
 		width: 50%;
-		padding-left: 18%;
-		padding-top: 5%;
+		margin-right: 3%;
+	}
+
+	.header-list ul li{
+		display: inline;
+	/*	background: orange;  */
+		float: right;
+		margin-top: 2%;
+		margin-right: 2%;
+		font-size: 15px;
+		font-weight: bold;
+		color: black;
+		font-family: Microsoft JhengHei;
+		padding: 10px;
+	}
+
+	.header-list ul li:hover{
+		/*background: #A0B4DC;*/
+		background-image: url('img/bicycle-transBlue.png');
+	}
+
+	.smartphone-botton{
+		display: none;
+	}
+
+	.bottom-view-word{
+		display: none;
+	}
+
+
+	.clear{
+		clear: both;
+
+	}
+
+	.search-map{
+		float: left;
+		height: 100%;
+		background-color: rgba(255, 230, 153, 0.67); 
+		width: 80%;
+		font-family: Microsoft JhengHei;
+	}
+
+	#map{
+		margin: 5% 2% 3% 6%;
+		background: orange;
+		width: 65%;
+		height: 80%; 
+		float: left;
+		border: 1.5px solid black; 
+	}
+
+	.search-page-introduce{
+		float: left;
+		margin: 5% 0 0 0;
+		height: 88%;
+		width: 26%;
+	}
+
+	#No1{
+		width: 24%;
+
+	}
+
+	#search-page-title{
+		font-size: 24px;
+		font-weight: bold;
+		display: inline-block;
+		width: 40%;
+		position: relative;
+		top: -6.5%;
+	}
+
+	.map-popout{
+		background: rgb(255,255,136);
+		height: 100%;
+		width: 100%;
+		font-family: Microsoft JhengHei;
+	}
+
+	#No2{
+		display: inline-block;
+		width: 60px;
+		margin-left: 22%;
+		margin-top: 5px;
+	}
+
+	#map-popout-title-word{
+		position: relative;
+		top: -15px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	.map-popout-info{
+		text-align: center;
+		font-size: 15px;
+		background: rgb(255,255,136);
+
+	}
+
+
+	.map-popout-stop-name{
+		margin: 5px auto;
+		font-size: 18px;
+		font-weight: bold;
+		padding: 2px 0;
+	}
+
+	.map-popout-stop-left-car{
+		float: left;
+		margin:0 5px 0 35px;
+		border-bottom: 3px black solid;
+		width: 35%;
+		height: 60px;
+	}
+
+	.map-popout-stop-left-space{
+		float: right;
+		margin: 0 35px 0 5px;
+		border-bottom: 3px black solid;
+		width: 35%;
+		height: 60px;
+	}
+
+
+	#map-popout-icon{
+		display: inline-block;
+		width: 55px;
+		float: left;
+	}
+
+	#map-popout-number{
+		font-weight: bolder;
+		font-size: 40px;
+		float: left;
+		position: relative;
+		top: 0px;
+		right: -10px;
+	}
+
+	.map-popout-address{
+		margin:20px auto;
+	}
+
+	.map-popout-streetview{
+		margin: 10px auto;
+		background: rgb(255,255,136);
+	}
+
+	#map-popout-pic{
+		width: 130px;
+		height: 90px;
+		margin:0 8px; 
+		overflow: hidden;
+		cursor: -webkit-grab; 
+		cursor: grab;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	#clueText{
+		visibility: hidden;
+		width: 135px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px;
+		position: absolute;
+		right: 0;
+		bottom: 25px;
+		z-index: 1;
+	}
+
+	.map-popout-streetview:hover #clueText {
+		visibility: visible;
+	}
+
+	.mobile-body{
+		display: none;
+	}
+
+
+
+	.start-navigation{}
+
+	.start-navigation #navi_btn{
+		display: block;
+		width: 100%;
+		background: rgb(255,203,37); 
+		text-decoration: none; 
+		color: black;
+		font-family: "微軟正黑體";
+		font-size: 1.3em;
+		margin: 10px 0 20px 0; 
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		vertical-align: middle;
+		padding: 5px 0;
+		cursor: -webkit-pointer; 
+		cursor: pointer;
+	}
+
+
+
+	#picture-preview{
+		width: 100%;
+		height: 88%;
+		background-color: rgba(0,32,96,0.7);
+		position: relative;
+		top: -88%;
+		z-index: 0;
+		display: none;
+		text-align:center;
+	}
+
+	#big-pic{
+		margin-top: 6%;
+		max-height: 70%;
+		display: inline-block;
+		border:white 5px solid;
+	}
+
+
+	.setTargetInfoContainer{
+		width:  200px;
+		text-align: center;
+		background-color: #A3DDFF;
+		font-family: "微軟正黑體";
+		border: 0px rgba(255,255,255,0);
+	}
+
+	.setTargetTitle{
+		width: inherit;
+		padding: 1em 0 0.5em 0;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	.setTargetBikesNum{
+		width: inherit;
+		padding-bottom: 15px;
+		font-size: 1.2em;
+
+	}
+
+	.b_available{
+		float: left;
+		width: 50%;
+
+	}
+
+	.b_space{
+		float: right;
+		width: 50%;
+	}
+
+	.setTargetFunctions{
+		font-size: 1em;
+		font-weight: bold;
+		background-color: #002685;
+		color: white;
+		cursor: -webkit-pointer; 
+		cursor: pointer;
+	}
+
+
+	#setTarget_choose{
+		width: 100%;
+		font-family: inherit;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		padding: 15px 0;
+	}
+}
+
+/*phone*/
+@media(max-width: 767.98px) {
+	body{
+		font-family: "微軟正黑體";
+		height:100vh;
+	}
+	.header{
+		background-color: rgb(202, 228, 186);
+		width: 100%;
+		min-height: 13%;
+		/*position: absolute;*/
+	}
+	#index-body{
+		position: absolute;	
 	}
 
 	#logo{
-		width: 50px;
-		height: 50px;
+		width: 55px;
+		height: 55px;
+		float: left;
+		margin-left: 33%;
+	}
+
+	#header-title{
+		font-size: 1.8em;
+		float: left;
+		padding: 0.4em 0;
+		margin-left: 0.35em;
 	}
 
 	#title-big{
@@ -664,8 +979,8 @@ body{
 
 	.smartphone-botton{
 		width: 100%;
-	/*	background: blue;*/
  		display: block;
+ 		height: 5%;
 	}
 
 	.body{
@@ -716,8 +1031,8 @@ body{
 	}
 
 	.bottom-view{
-		background:url("img/579900_2.jpg") no-repeat left top;　//設定背景圖片的呈現方式
-		background-size:contain;　//
+		background:url("img/579900_2.jpg") no-repeat left top;　/*設定背景圖片的呈現方式*/
+		background-size:contain;　
 		height: 100%;
 		width:100%;
 	}
@@ -739,168 +1054,6 @@ body{
 		font-weight: bold;
 		display: block;
 	}
-
-}	
-
-.clear{
-	clear: both;
-
-}
-
-.search-map{
-	float: left;
-	height: 100%;
-	background-color: rgba(255, 230, 153, 0.67); 
-	width: 80%;
-	font-family: Microsoft JhengHei;
-}
-
-#map{
-	margin: 5% 2% 3% 6%;
-	background: orange;
-	width: 65%;
-	height: 80%; 
-	float: left;
-	border: 1.5px solid black; 
-}
-
-.search-page-introduce{
-	float: left;
-	margin: 5% 0 0 0;
-	height: 88%;
-	width: 26%;
-}
-
-#No1{
-	width: 24%;
-
-}
-
-#search-page-title{
-	font-size: 24px;
-	font-weight: bold;
-	display: inline-block;
-	width: 40%;
-	position: relative;
-	top: -6.5%;
-}
-
-.map-popout{
-	background: rgb(255,255,136);
-	height: 420px;
-	width: 320px;
-	font-family: Microsoft JhengHei;
-}
-
-#No2{
-	display: inline-block;
-	width: 60px;
-	margin-left: 22%;
-	margin-top: 5px;
-}
-
-#map-popout-title-word{
-	position: relative;
-	top: -15px;
-	font-weight: bold;
-	font-size: 25px;
-}
-
-.map-popout-info{
-	text-align: center;
-	font-size: 15px;
-
-}
-
-.map-popout-stop-name{
-	margin:0 auto;
-	font-size: 18px;
-	font-weight: bold;
-	padding: 2px 0;
-}
-
-.map-popout-stop-left-car{
-	float: left;
-	margin: 0 22px;
-	border-bottom: 3px black solid;
-	width: 35%;
-	height: 60px;
-}
-
-.map-popout-stop-left-space{
-	float: right;
-	margin: 0 22px;
-	border-bottom: 3px black solid;
-	width: 35%;
-	height: 60px;
-}
-
-
-#map-popout-icon{
-	display: inline-block;
-	width: 55px;
-	float: left;
-}
-
-#map-popout-number{
-	font-weight: bolder;
-	font-size: 40px;
-	float: left;
-	position: relative;
-	top: 0px;
-	right: -10px;
-}
-
-.map-popout-address{
-	margin:12px auto;
-}
-
-.map-popout-streetview{
-	margin: 5px auto;
-
-}
-
-#map-popout-pic{
-	width: 130px;
-	height: 90px;
-	margin:0 8px; 
-	overflow: hidden;
-}
-
-.mobile-body{
-	display: none;
-}
-
-.start-navigation{
-	background: rgb(255,203,37); 
-	padding: 10px;
-	color: black;
-	width: 23%;
-
-	position: absolute;
-	top: 80%;
-	left: 60%;
-}
-
-#picture-preview{
-	width: 100%;
-	height: 88%;
-	background-color: rgba(0,32,96,0.7);
-	position: relative;
-	top: -88%;
-	z-index: 0;
-	display: none;
-	text-align:center;
-}
-
-#big-pic{
-	margin-top: 6%;
-	max-height: 70%;
-	display: inline-block;
-	border:white 5px solid;
-}
-
-@media(max-width:320px) {
 
 	#search-page-body{
 		height: 64.5%;
@@ -1027,39 +1180,35 @@ body{
  		top: -20px;
 	}
 
-	#map-popout-pic{
-		width: 70%;
-		height: 30%;
-	}
 
 	.start-navigation{
-	width: 28%;
-	line-height: 14px;
-	position: absolute;
-	top: 80%;
-	left: 50%;
-	font-size: 10px;
-	padding-bottom: 8px; 
+		width: 28%;
+		line-height: 14px;
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		font-size: 10px;
+		padding-bottom: 8px; 
 	}
 
 	#picture-preview{
-	width: 100%;
-	height: 86%;
-	background-color: rgba(0,32,96,0.7);
-	position: relative;
-	top: -53%;
-	z-index: 0;
-	display: none;
-	text-align:center;
+		width: 100%;
+		height: 86%;
+		background-color: rgba(0,32,96,0.7);
+		position: relative;
+		top: -53%;
+		z-index: 0;
+		display: none;
+		text-align:center;
 	}
 
 	#big-pic{
-	max-height: 70%;
-	max-width: 70%;
-	display: inline-block;
-	border:white 5px solid;
-	position: relative;
-	top: -15%;
+		max-height: 70%;
+		max-width: 70%;
+		display: inline-block;
+		border:white 5px solid;
+		position: relative;
+		top: -15%;
 	}
 
 	.left-fun-outline{
@@ -1073,3 +1222,4 @@ body{
 	}
 
 }
+	
